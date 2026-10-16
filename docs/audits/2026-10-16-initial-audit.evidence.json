@@ -1,0 +1,185 @@
+{
+  "audit_version": 1,
+  "observation_date": "2026-10-16",
+  "reference_clock_utc": "2026-10-16T10:37:04Z",
+  "timezone": "America/Lima",
+  "evidence_kind": "curated summary of commands and real HTTP observations; not raw response archives",
+  "repository": {
+    "expected_workspace_confirmed": true,
+    "branch": "feature/initial-audit",
+    "initial_worktree_clean": true,
+    "initial_tracked_files": ["README.md"],
+    "development_local_and_remote_sha": "cd3e92ef2a9c383e812545fd8f8aa6bc327b3dc9",
+    "main_local_and_remote_sha": "0794636394464c9d515bcc47ae7f3dd99ccf993c"
+  },
+  "environment": {
+    "python_version": "3.11.9",
+    "git_version": "2.56.0.windows.1",
+    "github_cli_version": "2.102.0",
+    "github_cli_in_session_path": false,
+    "github_cli_found_at_standard_program_files_location": true,
+    "python_launcher_found_installations": false,
+    "temporary_venv_creation_passed": true,
+    "temporary_venv_pip_version": "24.0",
+    "temporary_venvs_removed": true,
+    "global_tzdata_version": "2026.2",
+    "isolated_venv_lima_timezone_available": false,
+    "isolated_venv_lima_error": "ZoneInfoNotFoundError: No time zone found with key America/Lima",
+    "ntp_synchronization_audited": false
+  },
+  "github": {
+    "repository_public": true,
+    "default_branch": "main",
+    "ruleset_id": 25206470,
+    "ruleset_name": "Protect main",
+    "enforcement": "active",
+    "ref_name_include": ["~DEFAULT_BRANCH"],
+    "ref_name_exclude": [],
+    "effective_main_rules": ["deletion", "non_fast_forward", "pull_request", "required_signatures"],
+    "required_approving_review_count": 0,
+    "dismiss_stale_reviews_on_push": false,
+    "require_last_push_approval": false,
+    "required_status_checks_rule_present": false,
+    "bypass_actors_field_present": false,
+    "bypass_actors_verified": false,
+    "auth_status": "token reported invalid",
+    "authenticated_user_endpoint_status": 401,
+    "public_api_reads_succeeded": true,
+    "remote_write_permission_verified": false,
+    "commit_signature": {
+      "sha": "cd3e92ef2a9c383e812545fd8f8aa6bc327b3dc9",
+      "github_verified": true,
+      "github_reason": "valid",
+      "github_verified_at": "2026-10-16T08:05:59Z",
+      "default_local_verifier_result": "infrastructure error launching ssh-keygen; not a reliable cryptographic verdict",
+      "native_windows_verifier_with_temporary_trust_result": "G",
+      "private_key_read": false,
+      "permanent_configuration_changed": false
+    }
+  },
+  "source_observations": [
+    {
+      "url": "https://esports-api.lolesports.com/persisted/gw/getLeagues?hl=en-US",
+      "status": 403,
+      "http_date": "Fri, 16 Oct 2026 10:32:52 GMT",
+      "message": "Forbidden",
+      "credentials_sent": false
+    },
+    {
+      "url": "https://esports-api.lolesports.com/persisted/gw/getSchedule?hl=en-US",
+      "status": 403,
+      "http_date": "Fri, 16 Oct 2026 10:32:52 GMT",
+      "message": "Forbidden",
+      "credentials_sent": false
+    },
+    {
+      "url": "https://esports-api.lolesports.com/persisted/gw/getLive?hl=en-US",
+      "status": 403,
+      "http_date": "Fri, 16 Oct 2026 10:32:53 GMT",
+      "message": "Forbidden",
+      "credentials_sent": false
+    },
+    {
+      "url": "https://feed.lolesports.com/livestats/v1/window/0",
+      "status": 404,
+      "http_date": "Fri, 16 Oct 2026 10:32:53 GMT",
+      "error_code": "RESOURCE_NOT_FOUND",
+      "identifier_kind": "deliberately nonexistent diagnostic identifier",
+      "real_game_telemetry_verified": false
+    },
+    {
+      "url": "https://lolesports.com/robots.txt",
+      "status": 200,
+      "http_date": "Fri, 16 Oct 2026 10:32:54 GMT",
+      "body": "User-agent: *",
+      "interpretation": "access directive observed; not evidence of data licensing or API authorization"
+    },
+    {
+      "url": "https://lolesports.com/en-US/",
+      "status": 200,
+      "requested_at": "2026-10-16T10:34:28.024422+00:00",
+      "received_at": "2026-10-16T10:34:29.203645+00:00",
+      "http_date": "Fri, 16 Oct 2026 10:34:28 GMT",
+      "http_age_seconds": 19,
+      "cache_control": "public,max-age=0,must-revalidate",
+      "body_bytes_read": 2531896,
+      "truncated": false,
+      "body_limit_bytes": 8000001,
+      "initial_separate_read_truncated_at_bytes": 2000001,
+      "subsequent_dom_inspection_time_element_count_all_leagues": 38,
+      "season_event_objects_are_match_records": false,
+      "provider_sporting_updated_at": null,
+      "complete_calendar_coverage_verified": false,
+      "live_state_verified": false,
+      "public_vod_identifier_paths_observed": true,
+      "stable_identifiers_for_all_upcoming_matches_verified": false,
+      "raw_body_retained": false
+    },
+    {
+      "url": "https://gol.gg/",
+      "status": 200,
+      "requested_at": "2026-10-16T10:33:54.596893+00:00",
+      "received_at": "2026-10-16T10:33:55.228483+00:00",
+      "body_bytes_read": 176,
+      "observation": "JavaScript redirect document; script not executed",
+      "usable_statistics_obtained": false
+    },
+    {
+      "url": "https://gol.gg/esports/home/",
+      "status": 200,
+      "requested_at": "2026-10-16T10:40:22.470645+00:00",
+      "received_at": "2026-10-16T10:40:23.967556+00:00",
+      "body_bytes_read": 500001,
+      "truncated": true,
+      "observation": "Public destination named by root JavaScript redirect; requested directly without executing JavaScript. Statistics navigation links observed.",
+      "worlds_2026_statistical_coverage_verified": false
+    },
+    {
+      "url": "https://lol.timsevenhuysen.com/",
+      "status": 200,
+      "requested_at": "2026-10-16T10:33:55.228483+00:00",
+      "received_at": "2026-10-16T10:33:56.283608+00:00",
+      "body_bytes_read": 252864,
+      "downloaded_statistical_dataset": false
+    },
+    {
+      "url": "https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki",
+      "status": 403,
+      "requested_at": "2026-10-16T10:33:56.284611+00:00",
+      "http_date": "Fri, 16 Oct 2026 10:33:56 GMT",
+      "api_access_verified": false,
+      "domain_migration_verified": false
+    },
+    {
+      "url": "https://chaincc.lol/free/data",
+      "status": 200,
+      "requested_at": "2026-10-16T10:33:56.473718+00:00",
+      "received_at": "2026-10-16T10:33:57.147360+00:00",
+      "body_bytes_read": 72168,
+      "advertised_format": "gzipped CSV per season for player and team rows",
+      "advertised_license": "CC BY 4.0",
+      "downloaded_statistical_dataset": false,
+      "independence_from_other_providers_verified": false
+    }
+  ],
+  "explicitly_unverified": [
+    "getEventDetails and getStandings responses",
+    "livestats details responses",
+    "real game telemetry and latency",
+    "API authentication requirements beyond observed anonymous access denial",
+    "contractual support and permitted reuse of esports API data",
+    "provider sporting data freshness and full Worlds 2026 coverage",
+    "remote authenticated write access",
+    "current ruleset bypass actors"
+  ],
+  "audit_changes": {
+    "documentation_only": true,
+    "implementation_started": false,
+    "main_changed": false,
+    "credentials_changed": false,
+    "security_rules_changed": false,
+    "permanent_dependencies_installed": false,
+    "commits_created": false,
+    "pull_requests_created": false
+  }
+}

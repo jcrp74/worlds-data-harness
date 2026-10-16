@@ -1,0 +1,10 @@
+# Dependencias directas y transitivas verificadas en Python 3.11 / Windows.
+setuptools==84.0.0
+tzdata==2026.5
+pytest==9.1.1
+colorama==0.4.6; sys_platform == "win32"
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+-e .
